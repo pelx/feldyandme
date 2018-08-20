@@ -83,19 +83,37 @@ $(document).ready(function() {
     });
 
     /* Maps */
-    var map = new GMaps({
+    /* var map = new GMaps({
         div: '.map',
         lat: 51.5193943,
         lng: -0.0844537,
         zoom: 12
-      });
-    
-     map.addMarker({
+    });
+        
+        map.addMarker({
         lat: 51.5193943,
         lng: -0.14,
         title: 'London',
         infoWindow: {content: '<p>My Location</p>'}
    });
+ */
+
+    function initMap() {
+    var myLatLng = {lat: -25.363, lng: 131.044};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+    });
+    }
+
+
 });
 
     
