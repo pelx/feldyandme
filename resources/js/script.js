@@ -81,10 +81,24 @@ $(document).ready(function() {
             
         }        
     });
+
+    /* Maps */
+    var map = new GMaps({
+        div: '.map',
+        lat: 51.5193943,
+        lng: -0.0844537,
+        zoom: 12
+      });
     
+     map.addMarker({
+        lat: 51.5193943,
+        lng: -0.14,
+        title: 'London',
+        infoWindow: {content: '<p>My Location</p>'}
+   });
 });
 
-
+    
 
 
 
